@@ -17,8 +17,8 @@ namespace TestMod.Content.Items
 			Item.DamageType = DamageClass.Magic;
 			Item.width = 40;
 			Item.height = 40;
-            Item.SetShopValues(ItemRarityColor.LightRed4, 10000);
-            Item.UseSound = SoundID.Item71;
+            		Item.SetShopValues(ItemRarityColor.LightRed4, 10000);
+            		Item.UseSound = SoundID.Item71;
 			Item.autoReuse = true;
 
         }
