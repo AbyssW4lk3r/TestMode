@@ -5,8 +5,7 @@ using Terraria.ModLoader;
 using TestMod.Content.Projectiles;
 
 namespace TestMod.Content.Items
-{ 
-	
+{ 	
 	public class TestSword : ModItem
 	{
 	
@@ -30,13 +29,12 @@ namespace TestMod.Content.Items
 			recipe.AddTile(TileID.WorkBenches);
 			recipe.Register();
 		}
-        public override void ModifyManaCost(Player player, ref float reduce, ref float mult)
+        	public override void ModifyManaCost(Player player, ref float reduce, ref float mult)
 		{
 			if (player.statLife < player.statLifeMax2 / 2)
 			{
 				mult *= 0.5f;
 			}
 		}
-
-    }
+    	}
 }
