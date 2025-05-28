@@ -32,7 +32,6 @@ namespace TestMod.Content.Items
 
         public override void ModifyShootStats(Player player, ref Vector2 position, ref Vector2 velocity, ref int type, ref int damage, ref float knockback)
         {
-            // Направляем в сторону курсора
             velocity = Main.MouseWorld - player.Center;
             velocity.Normalize();
             velocity *= Item.shootSpeed;
