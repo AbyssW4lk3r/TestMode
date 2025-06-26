@@ -1,0 +1,47 @@
+# This file will automatically update with entries for new content after a build and reload.
+
+Items: {
+	TestSword: {
+		DisplayName: Ice Tome
+		Tooltip: ""
+	}
+
+	Singularity: {
+		Tooltip: Increase damage by 50%, Increase crit chance by 25%, Increase attack speed by 20%, Increase knockback by 100%, Increase move speed by 30%
+		DisplayName: Singularity
+	}
+
+	Blood: {
+		DisplayName: Blood
+		Tooltip: ""
+	}
+
+	BloodBullet: {
+		DisplayName: Blood Bullet
+		Tooltip: ""
+	}
+
+	BloodSon: {
+		DisplayName: Blood Son
+		Tooltip: ""
+	}
+
+	Murasama: {
+		DisplayName: Murasama
+		Tooltip: ""
+	}
+}
+
+Projectiles: {
+	IceProjectile.DisplayName: Ice Projectile
+	BloodBullet.DisplayName: Blood Bullet
+	MurasamaSwing.DisplayName: Murasama Swing
+	DistortionProjectile.DisplayName: Distortion Projectile
+}
+
+Buffs: {
+	FrozenBurn: {
+		DisplayName: Frozen Burn
+		Description: Mods.TestMod.Buffs.FrozenBurn.Description
+	}
+}
