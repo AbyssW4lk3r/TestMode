@@ -18,6 +18,4 @@ namespace TestMod.Common.GlobalNPCs
             }
         }       
     }
-
-
 }
