@@ -30,11 +30,6 @@ namespace TestMod.Content.Ammo
             Item.shoot = ModContent.ProjectileType<Projectiles.BloodBullet>();
 
             Item.ammo = AmmoID.Bullet;
-
-            
-
-
-
         }
         public override void AddRecipes()
         {
