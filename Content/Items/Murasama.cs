@@ -37,26 +37,26 @@ namespace TestMod.Content.Items
 
         public override bool CanUseItem(Player player)
         {
-            if (player.altFunctionUse == 2) // Правая кнопка мыши
+            if (player.altFunctionUse == 2) 
             {
-                Item.useStyle = ItemUseStyleID.HoldUp; // Изменяем стиль анимации
-                Item.shoot = ModContent.ProjectileType<DistortionProjectile>(); // Снаряд для ПКМ
+                Item.useStyle = ItemUseStyleID.HoldUp; 
+                Item.shoot = ModContent.ProjectileType<DistortionProjectile>(); 
                 return true;
             }
-            else // Левая кнопка мыши
+            else 
             {
                 Item.useStyle = ItemUseStyleID.Swing;
-                Item.shoot = ModContent.ProjectileType<MurasamaSwing>(); // Обычная атака
+                Item.shoot = ModContent.ProjectileType<MurasamaSwing>(); 
                 return player.ownedProjectileCounts[Item.shoot] <= 0;
             }
         }
 
         public override void ModifyShootStats(Player player, ref Vector2 position, ref Vector2 velocity, ref int type, ref int damage, ref float knockback)
         {
-            if (player.altFunctionUse == 2) // Только для ПКМ
+            if (player.altFunctionUse == 2) 
             {
                 position = player.Center;
-                velocity = Vector2.Zero; // Статичный снаряд
+                velocity = Vector2.Zero; 
             }
             else
             {
