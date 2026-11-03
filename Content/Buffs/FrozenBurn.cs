@@ -43,10 +43,8 @@ namespace TestMod.Content.Buffs
 
             if (frozenBurnData.IsDamaging && Main.GameUpdateCount - frozenBurnData.LastDamageTime >= 60)
             {
-                // Рассчитываем ЧИСТЫЙ урон (10% от max HP, разделённые на 5 тиков)
-                int pureDamage = (int)(npc.lifeMax * 0.03f); // 2% за тик
+                int pureDamage = (int)(npc.lifeMax * 0.03f); 
 
-                // Наносим урон, игнорируя броню
                 npc.SimpleStrikeNPC(pureDamage, hitDirection: 1, noPlayerInteraction: true);
 
                 frozenBurnData.DamageTicksLeft--;
@@ -105,7 +103,6 @@ namespace TestMod.Content.Buffs
 
         public override void ModifyHitByProjectile(NPC npc, Projectile projectile, ref NPC.HitModifiers modifiers)
         {
-            // Фильтр по типам урона (если нужно)
             if (projectile.DamageType == DamageClass.Melee ||
                 projectile.DamageType == DamageClass.Ranged ||
                 projectile.DamageType == DamageClass.Magic)
@@ -122,7 +119,7 @@ namespace TestMod.Content.Buffs
             if (npc.TryGetGlobalNPC(out FrozenBurnNPC frozenBurnNPC))
             {
                 data.HitCount++;
-                npc.AddBuff(ModContent.BuffType<FrozenBurn>(), 301); // 3 секунды
+                npc.AddBuff(ModContent.BuffType<FrozenBurn>(), 301); 
             }
         }
     }
