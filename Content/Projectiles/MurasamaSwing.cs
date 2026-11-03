@@ -46,8 +46,6 @@ namespace TestMod.Content.Projectiles
             Projectile.timeLeft = (int)(TotalAnimationTime * 60);
         }
 
-        
-
         public override void AI()
         {
             timer++;
