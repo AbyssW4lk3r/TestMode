@@ -29,7 +29,7 @@ namespace TestMod.Content.Projectiles
             Vector2 direction = mousePos - player.Center;
             direction.Normalize();
             Projectile.rotation = direction.ToRotation();
-            Projectile.direction = direction.X > 0 ? 1 : -1; // Устанавливаем направление для удара
+            Projectile.direction = direction.X > 0 ? 1 : -1;
 
             if (Projectile.timeLeft < 30)
             {
